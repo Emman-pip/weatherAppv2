@@ -21,15 +21,16 @@ async function weatherData() {
 
   //   console.log(`${lat}\n${lon}\n${countryCode}\n${fullname}`);
 
-  const conditionsFetch = await fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
-  );
+  //   const conditionsFetch = await fetch(
+  //     `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
+  //   );
 
   const currentConditionsFetch = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
   );
   const conditionJson = await currentConditionsFetch.json();
   console.log(conditionJson);
+  return conditionJson;
 }
 
 weatherData();
