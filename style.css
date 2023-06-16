@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --color-1: #300333;
+  --color-2: #230333;
+  --color-3: #04000a;
+  --color-4: #090333;
+  --color-5: #030933;
+  color: whitesmoke;
+}
+
+.maincontainer {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(
+    to left,
+    var(--color-2),
+    var(--color-5),
+    var(--color-4)
+  );
+}
+.topBar {
+  height: 10vh;
+  background: linear-gradient(to left, var(--color-1), var(--color-3));
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-family: cursive;
+  font-size: 6vh;
+}
+
+.mainbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
