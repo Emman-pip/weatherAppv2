@@ -1,30 +1,39 @@
 // api key
 
 async function locationData(loc = "London") {
-  const data = await fetch(
-    `https://api.openweathermap.org/geo/1.0/direct?q=${loc}}&appid=c41ecc1335087d556ee87ffa89750cad`
-  );
-  const coordinates = await data.json();
-  const lat = coordinates[0].lat;
-  const lon = coordinates[0].lon;
+  try {
+    const data = await fetch(
+      `https://api.openweathermap.org/geo/1.0/direct?q=${loc}}&appid=c41ecc1335087d556ee87ffa89750cad`
+    );
+    const coordinates = await data.json();
+    const lat = coordinates[0].lat;
+    const lon = coordinates[0].lon;
 
-  return [lat, lon];
+    return [lat, lon];
+  } catch (error) {
+    alert(error + "\nNO WEATHER DATA AVAILABLE");
+  }
 }
 
 async function weatherData(loc) {
-  const data = await locationData(loc);
-  const lat = data[0];
-  const lon = data[1];
+  try {
+    const data = await locationData(loc);
+    const lat = data[0];
+    const lon = data[1];
 
-  //   const conditionsFetch = await fetch(
-  //     `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
-  //   );
+    //   const conditionsFetch = await fetch(
+    //     `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
+    //   );
 
-  const currentConditionsFetch = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
-  );
-  const conditionJson = await currentConditionsFetch.json();
-  return conditionJson;
+    const currentConditionsFetch = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
+    );
+    const conditionJson = await currentConditionsFetch.json();
+    return conditionJson;
+  } catch (error) {
+    alert(error + "\nNO WEATHER DATA AVAILABLE");
+    window.close();
+  }
 }
 
 async function displayData(loc = "London", parent) {
@@ -122,7 +131,13 @@ async function displayData(loc = "London", parent) {
   sunset.appendChild(sunsetText);
 }
 
-export async function searchWeather(parentOfSearchBar, parentOfWeatherWindow) {
+import { useNewsData } from "./news.js";
+
+export async function searchWeather(
+  parentOfSearchBar,
+  parentOfWeatherWindow,
+  parentOfNews
+) {
   const container = document.createElement("div");
   container.classList.add("searchContainer");
   const searchBar = document.createElement("input");
@@ -136,14 +151,19 @@ export async function searchWeather(parentOfSearchBar, parentOfWeatherWindow) {
   container.appendChild(searchBar);
   container.appendChild(button);
   await displayData("London", parentOfWeatherWindow);
+  await useNewsData("London", parentOfNews);
   button.addEventListener("click", () => {
     parentOfWeatherWindow.innerHTML = "";
+    parentOfNews.innerHTML = "";
     displayData(searchBar.value, parentOfWeatherWindow);
+    useNewsData(searchBar.value, parentOfNews);
   });
   searchBar.addEventListener("keyup", (event) => {
     if (event.code == "Enter") {
       parentOfWeatherWindow.innerHTML = "";
+      parentOfNews.innerHTML = "";
       displayData(searchBar.value, parentOfWeatherWindow);
+      useNewsData(searchBar.value, parentOfNews);
     }
   });
 }

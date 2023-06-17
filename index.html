@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script type="module" src="./weather.js"></script>
     <script type="module" src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="maincontainer">
       <div class="topBar">
-        <img src="" alt="logo" />
+        <img src="./logo.svg" alt="logo" class="logo" />
         <div class="label">Weather App</div>
       </div>
       <div class="mainbody">
-        <div class="weatherInfo"></div>
+        <div class="primary"></div>
+        <div class="secondaryContainer">
+          <div class="weatherInfo"></div>
+          <div class="newsPanel"></div>
+        </div>
       </div>
     </div>
   </body>

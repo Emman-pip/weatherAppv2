@@ -1,6 +1,7 @@
 import { searchWeather } from "./weather.js";
 
 searchWeather(
-  document.querySelector(".mainbody"),
-  document.querySelector(".weatherInfo")
+  document.querySelector(".primary"),
+  document.querySelector(".weatherInfo"),
+  document.querySelector(".newsPanel")
 );

@@ -44,7 +44,8 @@
   align-items: center;
 }
 
-.weatherInfo {
+.weatherInfo,
+.news {
   display: flex;
   padding: 3rem;
   height: fit-content;
@@ -53,6 +54,26 @@
   background: linear-gradient(to top right, var(--color-2), var(--color-1));
   justify-content: center;
   align-items: center;
+}
+.secondaryContainer {
+  display: flex;
+  gap: 1rem;
+}
+.news {
+  width: 60vh;
+  height: 60vh;
+  justify-content: center;
+  align-content: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.desc {
+  color: rgb(150, 150, 150);
+  font-size: 0.7rem;
+  text-align: justify;
 }
 
 .infos {
@@ -109,4 +130,26 @@
   display: flex;
   align-items: center;
   justify-items: center;
+}
+
+.gap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.none {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.logo {
+  height: 3rem;
+  filter: invert();
 }
