@@ -63,6 +63,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.weatherInfo {
+  justify-content: space-around;
+}
+
 .secondaryContainer {
   display: flex;
   gap: 1rem;
