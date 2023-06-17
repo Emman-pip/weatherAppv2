@@ -34,6 +34,7 @@
   gap: 0rem;
   min-width: 365px;
   padding: 1rem;
+  justify-content: space-between;
 }
 
 .label {
@@ -196,6 +197,15 @@
   }
 }
 
+@media (max-width: 450px) {
+  .label {
+    font-size: 4vh;
+  }
+  .github {
+    font-size: 2vh;
+  }
+}
+
 @media (max-width: 390px) {
   .weatherInfo,
   .news {
@@ -207,6 +217,12 @@
   }
   .label {
     font-size: 2rem;
+  }
+  .label {
+    font-size: 3vh;
+  }
+  .github {
+    font-size: 1vh;
   }
 }
 
@@ -223,7 +239,11 @@
 }
 
 .github {
-  height: 3rem;
+  height: 6vh;
   filter: invert();
   cursor: pointer;
+}
+
+.first {
+  display: flex;
 }
