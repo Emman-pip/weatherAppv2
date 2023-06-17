@@ -2,12 +2,18 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  --color-1: #300333;
+  /* --color-1: #300333;
   --color-2: #230333;
   --color-3: #04000a;
   --color-4: #090333;
-  --color-5: #030933;
-  color: whitesmoke;
+  --color-5: #030933; */
+  --gradient-1-4: linear-gradient(to top right, #00E6D1, #545479)
+  
+  --color-1: #00E6D1;
+  --color-2: #569d92;
+  --color-3: #ecfdfa;
+  --color-4: #545479;
+  color: var(--color-3);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -16,19 +22,15 @@
   min-width: 100vw;
   width: fit-content;
   height: fit-content;
-  background: linear-gradient(
-    to left,
-    var(--color-2),
-    var(--color-5),
-    var(--color-4)
-  );
+  background: var(--color-1);
   display: flex;
   flex-direction: column;
   gap: 4vh;
 }
 .topBar {
   height: 10vh;
-  background: linear-gradient(to left, var(--color-1), var(--color-3));
+  /* background: linear-gradient(to right, var(--color-1), var(--color-2)); */
+  background-color: var(--color-4);
   display: flex;
   align-items: center;
   gap: 0rem;
@@ -40,6 +42,10 @@
 .label {
   font-family: cursive;
   font-size: 6vh;
+  background: linear-gradient(to right, white,whitesmoke);
+  background-clip:text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .mainbody {
@@ -59,9 +65,11 @@
   height: fit-content;
   width: fit-content;
   border-radius: 5rem;
-  background: linear-gradient(to top right, var(--color-2), var(--color-1));
+  background: var(--gradient-1-4);
+  /* background: linear-gradient(to top right, var(--color-2), var(--color-1)); */
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to top right, var(--color-2), var(--color-4));
 }
 
 .weatherInfo {
@@ -85,9 +93,10 @@
 .title {
   font-size: 1.5rem;
   text-align: justify;
+  font-weight: 700;
 }
 .desc {
-  color: rgb(150, 150, 150);
+  color: var(--color-3);
   font-size: 0.7rem;
   text-align: justify;
 }
@@ -111,7 +120,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top right, var(--color-3), var(--color-5));
+  background-color: var(--color-2);
+  /* background: linear-gradient(to top right, var(--color-1), var(--color-2)); */
   padding: 2rem;
   height: fit-content;
   width: fit-content;
@@ -124,23 +134,25 @@
 
 .search {
   min-width: 190px;
-  color: whitesmoke;
+  color: var(--color-4);
   height: 2vw;
   width: 23vw;
   border-radius: 1rem;
   padding: 1rem;
-  background: linear-gradient(to top, var(--color-1), var(--color-5));
+  background-color: var(--color-3);
+  /* background: linear-gradient(to top, var(--color-1), var(--color-4)); */
 }
 
 .button {
-  color: whitesmoke;
+  color: var(--color-4);
   height: 2vw;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  background: linear-gradient(to top, var(--color-1), var(--color-5));
+  background-color: var(--color-3);
+  /* background: linear-gradient(to top, var(--color-1), var(--color-4)); */
 }
 
 .searchContainer {
@@ -252,3 +264,4 @@
 .first {
   display: flex;
 }
+
