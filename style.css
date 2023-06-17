@@ -40,12 +40,12 @@
 }
 
 .label {
-  font-family: cursive;
   font-size: 6vh;
-  background: linear-gradient(to right, white,whitesmoke);
+  background: linear-gradient(to right, white,rgb(155, 155, 155), whitesmoke);
   background-clip:text;
   -webkit-background-clip: text;
   color: transparent;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .mainbody {
