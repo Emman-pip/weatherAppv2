@@ -8,11 +8,14 @@
   --color-4: #090333;
   --color-5: #030933;
   color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .maincontainer {
   min-height: 100vh;
-  max-width: 100vw;
+  min-width: 100vw;
+  width: fit-content;
+  height: fit-content;
   background: linear-gradient(
     to left,
     var(--color-2),
@@ -28,7 +31,9 @@
   background: linear-gradient(to left, var(--color-1), var(--color-3));
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0rem;
+  min-width: 365px;
+  padding: 1rem;
 }
 
 .label {
@@ -46,6 +51,8 @@
 
 .weatherInfo,
 .news {
+  min-width: 403px;
+  min-height: 403px;
   display: flex;
   padding: 3rem;
   height: fit-content;
@@ -58,6 +65,9 @@
 .secondaryContainer {
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 .news {
   width: 60vh;
@@ -107,6 +117,7 @@
 }
 
 .search {
+  min-width: 190px;
   color: whitesmoke;
   height: 2vw;
   width: 23vw;
@@ -150,6 +161,69 @@
 }
 
 .logo {
+  width: 3rem;
+  filter: invert();
+}
+
+@media (max-width: 1250px) {
+  .secondaryContainer {
+    flex-direction: column;
+  }
+  .weatherInfo,
+  .news {
+    width: 60vw;
+    min-width: 590px;
+  }
+  .city {
+    font-size: 35px;
+  }
+  .dataFont {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 615px) {
+  .weatherInfo,
+  .news {
+    width: 90vw;
+    min-width: 355px;
+  }
+  .city {
+    font-size: 25px;
+  }
+  .dataFont {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 390px) {
+  .weatherInfo,
+  .news {
+    width: 90vw;
+    min-width: 320px;
+  }
+  .topBar {
+    min-width: 320px;
+  }
+  .label {
+    font-size: 2rem;
+  }
+}
+
+@media (max-height: 277px) {
+  .logo {
+    width: 6vh;
+  }
+}
+
+.condition,
+.weatherInfo,
+.news {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.551);
+}
+
+.github {
   height: 3rem;
   filter: invert();
+  cursor: pointer;
 }

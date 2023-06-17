@@ -1,6 +1,6 @@
 // api key
 
-async function locationData(loc = "London") {
+async function locationData(loc = "Philippines") {
   try {
     const data = await fetch(
       `https://api.openweathermap.org/geo/1.0/direct?q=${loc}}&appid=c41ecc1335087d556ee87ffa89750cad`
@@ -36,7 +36,7 @@ async function weatherData(loc) {
   }
 }
 
-async function displayData(loc = "London", parent) {
+async function displayData(loc = "Philippines", parent) {
   //loc name, country
 
   const infoContainer = document.createElement("div");
@@ -102,7 +102,7 @@ async function displayData(loc = "London", parent) {
 
   const sunrise = document.createElement("div");
   const sunriseLabel = document.createElement("div");
-  sunriseLabel.textContent = "Sunrise:";
+  sunriseLabel.textContent = "Sunrise(UTC+8):";
   const sunriseText = document.createElement("div");
   sunriseText.textContent = hours + ":" + minutes();
   sunriseText.classList.add("dataFont");
@@ -118,7 +118,7 @@ async function displayData(loc = "London", parent) {
 
   const sunset = document.createElement("div");
   const sunsetLabel = document.createElement("div");
-  sunsetLabel.textContent = "Sunset:";
+  sunsetLabel.textContent = "Sunset(UTC+8):";
   const sunsetText = document.createElement("div");
   sunsetText.textContent = hours2 + ":" + minutes2();
   sunsetText.classList.add("dataFont");
@@ -150,8 +150,8 @@ export async function searchWeather(
   parentOfSearchBar.appendChild(container);
   container.appendChild(searchBar);
   container.appendChild(button);
-  await displayData("London", parentOfWeatherWindow);
-  await useNewsData("London", parentOfNews);
+  await displayData("Philippines", parentOfWeatherWindow);
+  await useNewsData("Philippines", parentOfNews);
   button.addEventListener("click", () => {
     parentOfWeatherWindow.innerHTML = "";
     parentOfNews.innerHTML = "";
