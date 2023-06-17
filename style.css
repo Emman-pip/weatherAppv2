@@ -54,7 +54,6 @@
   justify-content: center;
   gap: 1rem;
   align-items: center;
-
 }
 
 .weatherInfo,
@@ -266,3 +265,39 @@
   display: flex;
 }
 
+.loadingBlur {
+  display: none;
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  backdrop-filter: blur(2rem);
+  background-color: #53627086;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  animation: ease-in 5s;
+}
+
+.appear {
+  display: flex;
+}
+@keyframes load {
+  0% {
+    rotate: 90deg;
+  }
+  25% {
+    rotate: 180deg;
+  }
+  50% {
+    rotate: 270deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+.loadingIcon {
+  animation-delay: 0ms;
+  height: 20vw;
+  animation-name: load;
+  animation-duration: 5s;
+}

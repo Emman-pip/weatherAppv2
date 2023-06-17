@@ -132,6 +132,7 @@ async function displayData(loc = "Philippines", parent) {
 }
 
 import { useNewsData } from "./news.js";
+import { loadingScreen } from "./loading.js";
 
 export async function searchWeather(
   parentOfSearchBar,
@@ -153,6 +154,7 @@ export async function searchWeather(
   await displayData("Philippines", parentOfWeatherWindow);
   await useNewsData("Philippines", parentOfNews);
   button.addEventListener("click", () => {
+    loadingScreen();
     parentOfWeatherWindow.innerHTML = "";
     parentOfNews.innerHTML = "";
     displayData(searchBar.value, parentOfWeatherWindow);
@@ -160,6 +162,7 @@ export async function searchWeather(
   });
   searchBar.addEventListener("keyup", (event) => {
     if (event.code == "Enter") {
+      loadingScreen();
       parentOfWeatherWindow.innerHTML = "";
       parentOfNews.innerHTML = "";
       displayData(searchBar.value, parentOfWeatherWindow);
