@@ -141,13 +141,22 @@ export async function searchWeather(
 ) {
   const container = document.createElement("div");
   container.classList.add("searchContainer");
+  container.classList.add("input-group");
+
   const searchBar = document.createElement("input");
   searchBar.placeholder = "Enter a valid location";
   searchBar.classList.add("search");
+  searchBar.classList.add("form-control");
+  searchBar.classList.add("input-group-text");
+
   searchBar.type = "search";
   const button = document.createElement("button");
   button.textContent = "Search";
   button.classList.add("button");
+  button.classList.add("btn");
+  button.classList.add("btn-dark");
+  button.classList.add("input-group-text");
+
   parentOfSearchBar.appendChild(container);
   container.appendChild(searchBar);
   container.appendChild(button);

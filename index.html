@@ -8,32 +8,78 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./logo.svg" />
     <title>WeatherApp</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="loadingBlur">
       <img src="./loading.svg" alt="loading" class="loadingIcon" />
     </div>
-    <div class="maincontainer">
-      <div class="topBar">
-        <div class="first">
-          <img src="./logo.svg" alt="logo" class="logo" />
-          <div class="label">Weather App</div>
-        </div>
-        <div class="github">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-            alt="github"
-            class="github"
-          />emman-pip
+
+    <nav class="topBar navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-md">
+        <a class="first navbar-brand">
+          <img src="./logo.svg" alt="logo" class="logo img-fluid" />
+          <div class="label"></div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="navbar-nav collapse navbar-collapse text-center justify-content-between"
+          id="nav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Weather and news</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">About</a>
+            </li>
+          </ul>
+          <div class="github nav-item">
+            <a href="#" class="nav-link">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                alt="github"
+                class="githubImage"
+              />
+            </a>
+          </div>
         </div>
       </div>
-      <div class="mainbody">
+    </nav>
+
+    <div class="maincontainer container-fluid">
+      <div class="mainbody container-fluid">
         <div class="primary"></div>
-        <div class="secondaryContainer">
-          <div class="weatherInfo"></div>
-          <div class="newsPanel"></div>
+        <div class="secondaryContainer container">
+          <div class="row">
+            <div class="weatherInfo col-lg-7 mb-3"></div>
+            <div class="newsPanel col-lg-5"></div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!--  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

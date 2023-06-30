@@ -7,45 +7,47 @@
   --color-3: #04000a;
   --color-4: #090333;
   --color-5: #030933; */
-  --gradient-1-4: linear-gradient(to top right, #00E6D1, #545479)
-  
-  --color-1: #00E6D1;
+  --gradient-1-4: linear-gradient(to top right, #00e6d1, #545479);
+  --color-1: #00e6d1;
   --color-2: #569d92;
   --color-3: #ecfdfa;
   --color-4: #545479;
   color: var(--color-3);
   font-family: Arial, Helvetica, sans-serif;
 }
+.heropage {
+  background-color: var(--color-2);
+  min-height: 100vh;
+}
 
 .maincontainer {
-  min-height: 100vh;
-  min-width: 100vw;
-  width: fit-content;
-  height: fit-content;
+  /* min-height: 100vh;
+  min-width: 100vw; */
+  /* width: fit-content;
+  height: fit-content; */
   background: var(--color-1);
   display: flex;
   flex-direction: column;
   gap: 4vh;
 }
 .topBar {
-  height: 10vh;
   /* background: linear-gradient(to right, var(--color-1), var(--color-2)); */
-  background-color: var(--color-4);
+  /* background-color: var(--color-4);
   display: flex;
   align-items: center;
   gap: 0rem;
   min-width: 365px;
   padding: 1rem;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .label {
   font-size: 6vh;
-  background: linear-gradient(to right, white,rgb(155, 155, 155), whitesmoke);
-  background-clip:text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* background: linear-gradient(to right, white,rgb(155, 155, 155), whitesmoke); */
+  /* background-clip:text; */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
 .mainbody {
@@ -58,12 +60,12 @@
 
 .weatherInfo,
 .news {
-  min-width: 403px;
-  min-height: 403px;
+  /* min-width: 403px;
+  min-height: 403px; */
   display: flex;
   padding: 3rem;
-  height: fit-content;
-  width: fit-content;
+  /* height: fit-content; */
+  /* width: fit-content; */
   border-radius: 5rem;
   background: var(--gradient-1-4);
   /* background: linear-gradient(to top right, var(--color-2), var(--color-1)); */
@@ -84,8 +86,7 @@
   padding: 1rem;
 }
 .news {
-  width: 60vh;
-  height: 60vh;
+  /* width: 60vh;*/
   justify-content: center;
   align-content: center;
 }
@@ -123,8 +124,8 @@
   background-color: var(--color-2);
   /* background: linear-gradient(to top right, var(--color-1), var(--color-2)); */
   padding: 2rem;
-  height: fit-content;
-  width: fit-content;
+  /* height: fit-content;
+  width: fit-content; */
   border-radius: 3rem;
 }
 
@@ -135,22 +136,22 @@
 .search {
   min-width: 190px;
   color: var(--color-4);
-  height: 2vw;
-  width: 23vw;
-  border-radius: 1rem;
-  padding: 1rem;
+  /* height: 2vw;
+  width: 23vw; */
+  /* border-radius: 1rem; */
+  /* padding: 1rem; */
   background-color: var(--color-3);
   /* background: linear-gradient(to top, var(--color-1), var(--color-4)); */
 }
 
 .button {
   color: var(--color-4);
-  height: 2vw;
-  padding: 1rem;
+  /* height: 2vw;
+  padding: 1rem; */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   background-color: var(--color-3);
   /* background: linear-gradient(to top, var(--color-1), var(--color-4)); */
 }
@@ -167,6 +168,7 @@
   gap: 1rem;
   padding: 1rem;
   height: 100%;
+  max-height: 60vh;
   overflow-y: scroll;
 }
 
@@ -175,78 +177,12 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 0;
 }
 
 .logo {
   width: 3rem;
   filter: invert();
-}
-
-@media (max-width: 1250px) {
-  .secondaryContainer {
-    flex-direction: column;
-  }
-  .weatherInfo,
-  .news {
-    width: 60vw;
-    min-width: 590px;
-  }
-  .city {
-    font-size: 35px;
-  }
-  .dataFont {
-    font-size: 23px;
-  }
-}
-
-@media (max-width: 615px) {
-  .weatherInfo,
-  .news {
-    width: 90vw;
-    min-width: 355px;
-  }
-  .city {
-    font-size: 25px;
-  }
-  .dataFont {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 450px) {
-  .label {
-    font-size: 4vh;
-  }
-  .github {
-    font-size: 2vh;
-  }
-}
-
-@media (max-width: 390px) {
-  .weatherInfo,
-  .news {
-    width: 90vw;
-    min-width: 320px;
-  }
-  .topBar {
-    min-width: 320px;
-  }
-  .label {
-    font-size: 2rem;
-  }
-  .label {
-    font-size: 3vh;
-  }
-  .github {
-    font-size: 1vh;
-  }
-}
-
-@media (max-height: 277px) {
-  .logo {
-    width: 6vh;
-  }
 }
 
 .condition,
@@ -257,8 +193,12 @@
 
 .github {
   height: 6vh;
-  filter: invert();
   cursor: pointer;
+}
+
+.githubImage {
+  width: 2rem;
+  filter: invert();
 }
 
 .first {
