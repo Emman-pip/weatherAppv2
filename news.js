@@ -4,7 +4,8 @@
 async function newsData(subject = "London") {
   try {
     const data = await fetch(
-      `https://newsdata.io/api/1/news?apikey=pub_24632c91231718cfd79a8ba8c04650e355e9a&q=${subject}`
+      `https://newsdata.io/api/1/news?apikey=pub_24632c91231718cfd79a8ba8c04650e355e9a&q=${subject}`,
+      { mode: "cors" }
     );
     const news = await data.json();
     return news;

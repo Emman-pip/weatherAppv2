@@ -26,7 +26,8 @@ async function weatherData(loc) {
     //   );
 
     const currentConditionsFetch = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`
+      `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=c41ecc1335087d556ee87ffa89750cad`,
+      { mode: "cors" }
     );
     const conditionJson = await currentConditionsFetch.json();
     return conditionJson;

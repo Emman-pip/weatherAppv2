@@ -21,7 +21,9 @@
       <img src="./loading.svg" alt="loading" class="loadingIcon" />
     </div>
 
-    <nav class="topBar navbar navbar-expand-md navbar-dark bg-dark">
+    <nav
+      class="topBar navbar navbar-expand-md navbar-dark bg-dark position-fixed top-0 container-fluid"
+    >
       <div class="container-md">
         <a class="first navbar-brand">
           <img src="./logo.svg" alt="logo" class="logo img-fluid" />
@@ -41,10 +43,10 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Weather and news</a>
+              <a class="nav-link" href="#weatherNews">Weather and news</a>
             </li>
             <li class="nav-item">
               <a class="nav-link">About</a>
@@ -62,10 +64,25 @@
         </div>
       </div>
     </nav>
+    <div>
+      <div class="heropage container-fluid text-dark g-0 position-relative">
+        <div id="slider" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="heroImage1 carousel-item vh-100 w-100 active"></div>
+            <div class="heroImage2 carousel-item vh-100 w-100"></div>
+            <div class="heroImage3 carousel-item vh-100 w-100"></div>
+            <div
+              class="heroImage4 carousel-item vh-100 w-100 vh-100 w-100"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="Herotext position-absolute"><h1>weatheroo</h1></div>
+    </div>
 
-    <div class="maincontainer container-fluid">
+    <div id="weatherNews" class="maincontainer container-fluid p-5">
       <div class="mainbody container-fluid">
-        <div class="primary"></div>
+        <div class="primary p-5 pb-3"></div>
         <div class="secondaryContainer container">
           <div class="row">
             <div class="weatherInfo col-lg-7 mb-3"></div>

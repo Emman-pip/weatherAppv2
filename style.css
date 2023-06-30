@@ -15,9 +15,47 @@
   color: var(--color-3);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+nav {
+  z-index: 10;
+}
 .heropage {
   background-color: var(--color-2);
-  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.Herotext {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.heroImage1 {
+  background-image: url("./pexels-andre-furtado-1162251.jpg");
+}
+.heroImage2 {
+  background-image: url("./pexels-brett-sayles-1431822.jpg");
+}
+.heroImage3 {
+  background-image: url("./pexels-johannes-plenio-1118873.jpg");
+}
+.heroImage4 {
+  background-image: url("./pexels-pixabay-209831.jpg");
+}
+
+.heroImage4,
+.heroImage3,
+.heroImage2,
+.heroImage1 {
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(0.2rem);
+  background-position: center center;
 }
 
 .maincontainer {
@@ -25,7 +63,7 @@
   min-width: 100vw; */
   /* width: fit-content;
   height: fit-content; */
-  background: var(--color-1);
+  background: var(--color-3);
   display: flex;
   flex-direction: column;
   gap: 4vh;
@@ -60,8 +98,8 @@
 
 .weatherInfo,
 .news {
-  /* min-width: 403px;
-  min-height: 403px; */
+  min-width: fit-content;
+  /* min-height: 403px; */
   display: flex;
   padding: 3rem;
   /* height: fit-content; */
