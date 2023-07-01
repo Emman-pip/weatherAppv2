@@ -163,20 +163,26 @@ export async function searchWeather(
   container.appendChild(button);
   await displayData("Philippines", parentOfWeatherWindow);
   await useNewsData("Philippines", parentOfNews);
-  button.addEventListener("click", () => {
+
+  async function use() {
     loadingScreen();
     parentOfWeatherWindow.innerHTML = "";
     parentOfNews.innerHTML = "";
-    displayData(searchBar.value, parentOfWeatherWindow);
-    useNewsData(searchBar.value, parentOfNews);
+    await displayData(searchBar.value, parentOfWeatherWindow);
+    await useNewsData(searchBar.value, parentOfNews);
+    if (document.querySelector(".gap").innerHTML == "") {
+      document.querySelector(".gap").innerHTML = "<h1>No news data found</h1>";
+    }
+
+    // if ()
+  }
+  button.addEventListener("click", () => {
+    use();
   });
+
   searchBar.addEventListener("keyup", (event) => {
     if (event.code == "Enter") {
-      loadingScreen();
-      parentOfWeatherWindow.innerHTML = "";
-      parentOfNews.innerHTML = "";
-      displayData(searchBar.value, parentOfWeatherWindow);
-      useNewsData(searchBar.value, parentOfNews);
+      use();
     }
   });
 }
