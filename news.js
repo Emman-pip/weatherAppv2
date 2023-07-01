@@ -16,10 +16,6 @@ async function newsData(subject = "London") {
   }
 }
 
-newsData().then((res) => {
-  console.log(res);
-});
-
 export async function useNewsData(subject, parent) {
   const Newscontainer = document.createElement("div");
   //   Newscontainer.innerHTML = "";

@@ -17,16 +17,34 @@
 }
 
 nav {
-  z-index: 3;
-}
-.heropage {
-  filter: sepia();
+  z-index: 10;
   background-color: var(--color-2);
-  max-height: 100vh;
-  z-index: 1;
 }
 
-.Herotext {
+.heropage {
+  filter: blur(1rem);
+  max-height: 100vh;
+  background-color: var(--color-2);
+
+  z-index: 1;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0, 0)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@font-face {
+  font-family: qai;
+  src: url("./Qairen.otf");
+}
+
+.Hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +55,28 @@ nav {
   top: 0;
   bottom: 0;
   margin: auto;
+  color: var(--color-4);
+}
+
+.Herotext {
+  font-family: qai;
+  color: var(--color-4);
+}
+
+.heroDesc {
+  color: var(--color-4);
+}
+
+.arrow {
+  bottom: 0;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-1);
+  padding: 0.4rem;
+  border-radius: 100rem;
+  z-index: 3;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.26);
 }
 
 .heroImage1 {
@@ -60,6 +100,13 @@ nav {
   background-attachment: fixed;
   filter: blur(0.2rem);
   background-position: center center;
+}
+.carousel {
+  background-color: var(--color-2);
+}
+
+.nav-link {
+  color: var(--color-4);
 }
 
 .maincontainer {
@@ -102,13 +149,13 @@ nav {
 
 .weatherInfo,
 .news {
-  min-width: fit-content;
+  /* min-width: fit-content; */
   /* min-height: 403px; */
   display: flex;
   padding: 1rem;
   /* height: fit-content; */
   /* width: fit-content; */
-  border-radius: 5rem;
+  /* border-radius: 5rem; */
   background: var(--gradient-1-4);
   /* background: linear-gradient(to top right, var(--color-2), var(--color-1)); */
   justify-content: center;
@@ -150,11 +197,11 @@ nav {
   gap: 1rem;
 }
 .city {
-  font-size: 3vw;
+  font-size: 2rem;
 }
 
 .dataFont {
-  font-size: 2vw;
+  font-size: 1.3rem;
 }
 
 .condition {
@@ -176,7 +223,6 @@ nav {
 }
 
 .search {
-  min-width: 190px;
   color: var(--color-4);
   /* height: 2vw;
   width: 23vw; */
@@ -240,7 +286,7 @@ nav {
 
 .githubImage {
   width: 2rem;
-  filter: invert();
+  /* filter: invert(); */
 }
 
 .first {

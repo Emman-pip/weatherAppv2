@@ -22,7 +22,7 @@
     </div>
     <!-- TODO: fix bug sa navbar toggler and yung news data shit na hindi  mafetch -->
     <nav
-      class="topBar navbar navbar-expand-md navbar-dark bg-dark top-0 container-fluid"
+      class="topBar navbar navbar-expand-md navbar-light position-fixed top-0 container-fluid"
     >
       <div class="container-md">
         <a class="first navbar-brand">
@@ -48,7 +48,7 @@
               <a class="nav-link" href="#weatherNews">Weather and news</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">About</a>
+              <a href="#about" class="nav-link">About</a>
             </li>
           </ul>
           <div class="github nav-item">
@@ -76,18 +76,36 @@
           </div>
         </div>
       </div>
-      <div class="Herotext"><h1>weatheroo</h1></div>
+      <div class="Hero d-flex flex-column text-center">
+        <h1 class="Herotext display-1">Weatheroo</h1>
+        <div class="lead heroDesc">Search weather anytime, anywhere</div>
+      </div>
+      <div class="arrowDown">
+        <a href="#weatherNews" class="arrow position-absolute mb-5 me-5">
+          <img
+            src="./free-arrow-down-icon-3101-thumb.png"
+            alt="Go Down"
+            class="img-fluid"
+          />
+        </a>
+      </div>
     </div>
 
-    <div id="weatherNews" class="maincontainer container-fluid p-5">
-      <div class="mainbody container-fluid">
-        <div class="primary p-5 pb-3"></div>
-        <div class="secondaryContainer container">
-          <div class="row">
-            <div class="weatherInfo col-lg-7 mb-3"></div>
-            <div class="newsPanel col-lg-5"></div>
+    <div id="weatherNews" class="maincontainer py-5 px-3">
+      <div class="mainbody">
+        <div class="primary container-lg p-5 pb-3"></div>
+        <div class="secondaryContainer container-fluid g-0">
+          <div class="row container-lg g-0">
+            <div class="weatherInfo col-lg-7 rounded-3 p-2"></div>
+            <div class="newsPanel col-lg-5 rounded-3"></div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="about" class="about container-fluid">
+      <div class="row text-center p-2">
+        <h1 class="col heroDesc fs-5">copyright @Emman-pip2023</h1>
       </div>
     </div>
 
