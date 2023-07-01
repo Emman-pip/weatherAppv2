@@ -17,22 +17,25 @@
 }
 
 nav {
-  z-index: 10;
+  z-index: 3;
 }
 .heropage {
   background-color: var(--color-2);
   max-height: 100vh;
+  z-index: 1;
 }
 
 .Herotext {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .heroImage1 {
